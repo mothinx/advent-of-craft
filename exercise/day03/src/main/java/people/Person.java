@@ -12,4 +12,12 @@ public record Person(String firstName, String lastName, List<Pet> pets) {
         pets.add(new Pet(petType, name, age));
         return this;
     }
+
+    public int youngestPetAgeOfThePerson() {
+        return pets()
+                .stream()
+                .mapToInt(Pet::age)
+                .min()
+                .orElse(Integer.MAX_VALUE);
+    }
 }
