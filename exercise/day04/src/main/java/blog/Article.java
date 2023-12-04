@@ -26,8 +26,8 @@ public class Article {
         } else comments.add(comment);
     }
 
-    public void addComment(String text, String author) throws CommentAlreadyExistException {
-        addComment(text, author, LocalDate.now());
+    public void addComment(Comment comment) throws CommentAlreadyExistException {
+        addComment(comment.text(), comment.author(), LocalDate.now());
     }
 
     public List<Comment> getComments() {

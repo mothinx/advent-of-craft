@@ -9,13 +9,13 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class ArticleTests {
     @Test
-    void it_should_add_valid_comment() throws CommentAlreadyExistException {
+    void it_should_be_able_to_comment() throws CommentAlreadyExistException {
         var article = new Article(
                 "Lorem Ipsum",
                 "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
         );
 
-        article.addComment("Amazing article !!!", "Pablo Escobar");
+        article.addComment(new Comment("Amazing article !!!", "Pablo Escobar", LocalDate.now()));
 
         assertThat(article.getComments())
                 .hasSize(1);
@@ -29,7 +29,8 @@ class ArticleTests {
         );
 
         var text = "Amazing article !!!";
-        article.addComment(text, "Pablo Escobar");
+        LocalDate now = LocalDate.now();
+        article.addComment(new Comment(text, "Pablo Escobar", now));
 
         assertThat(article.getComments())
                 .hasSize(1)
@@ -44,7 +45,7 @@ class ArticleTests {
         );
 
         var author = "Pablo Escobar";
-        article.addComment("Amazing article !!!", author);
+        article.addComment(new Comment("Amazing article !!!", author, LocalDate.now()));
 
         assertThat(article.getComments())
                 .hasSize(1)
@@ -58,7 +59,7 @@ class ArticleTests {
                 "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
         );
 
-        article.addComment("Amazing article !!!", "Pablo Escobar");
+        article.addComment(new Comment("Amazing article !!!", "Pablo Escobar", LocalDate.now()));
 
         assertThat(article.getComments())
                 .hasSize(1)
@@ -71,10 +72,10 @@ class ArticleTests {
                 "Lorem Ipsum",
                 "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
         );
-        article.addComment("Amazing article !!!", "Pablo Escobar");
+        article.addComment(new Comment("Amazing article !!!", "Pablo Escobar", LocalDate.now()));
 
         assertThatThrownBy(() -> {
-            article.addComment("Amazing article !!!", "Pablo Escobar");
+            article.addComment(new Comment("Amazing article !!!", "Pablo Escobar", LocalDate.now()));
         }).isInstanceOf(CommentAlreadyExistException.class);
     }
 }
