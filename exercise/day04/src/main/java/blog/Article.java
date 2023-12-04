@@ -17,7 +17,8 @@ public class Article {
     public void comment(Comment comment) throws CommentAlreadyExistException {
         if (comments.contains(comment)) {
             throw new CommentAlreadyExistException();
-        } else comments.add(comment);
+        }
+        comments.add(comment);
     }
 
     public List<Comment> getComments() {
