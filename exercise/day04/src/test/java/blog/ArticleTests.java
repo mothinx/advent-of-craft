@@ -2,6 +2,8 @@ package blog;
 
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
@@ -14,6 +16,9 @@ class ArticleTests {
         );
 
         article.addComment("Amazing article !!!", "Pablo Escobar");
+
+        assertThat(article.getComments())
+                .hasSize(1);
     }
 
     @Test
@@ -54,6 +59,10 @@ class ArticleTests {
         );
 
         article.addComment("Amazing article !!!", "Pablo Escobar");
+
+        assertThat(article.getComments())
+                .hasSize(1)
+                .anyMatch(comment -> comment.creationDate().equals(LocalDate.now()));
     }
 
     @Test
