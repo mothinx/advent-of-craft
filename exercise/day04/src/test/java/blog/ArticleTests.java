@@ -12,17 +12,24 @@ class ArticleTests {
 
     private Article article;
 
+    private Comment aComment;
+
     @BeforeEach
     void setUp() {
         article = new Article(
                 "Lorem Ipsum",
                 "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
         );
+        aComment = new Comment(
+                "Amazing article !!!",
+                "Pablo Escobar",
+                LocalDate.now()
+        );
     }
 
     @Test
     void it_should_be_able_to_comment() throws CommentAlreadyExistException {
-        article.comment(new Comment("Amazing article !!!", "Pablo Escobar", LocalDate.now()));
+        article.comment(aComment);
 
         assertThat(article.getComments())
                 .hasSize(1);
@@ -30,11 +37,6 @@ class ArticleTests {
 
     @Test
     void it_should_provide_the_comments() throws CommentAlreadyExistException {
-        var text = "Amazing article !!!";
-        var author = "Pablo Escobar";
-        LocalDate now = LocalDate.now();
-        Comment aComment = new Comment(text, author, now);
-
         article.comment(aComment);
 
         assertThat(article.getComments())
@@ -44,10 +46,10 @@ class ArticleTests {
 
     @Test
     void it_should_forbid_to_add_the_same_comment() throws CommentAlreadyExistException {
-        article.comment(new Comment("Amazing article !!!", "Pablo Escobar", LocalDate.now()));
+        article.comment(aComment);
 
         assertThatThrownBy(() -> {
-            article.comment(new Comment("Amazing article !!!", "Pablo Escobar", LocalDate.now()));
+            article.comment(aComment);
         }).isInstanceOf(CommentAlreadyExistException.class);
     }
 }
