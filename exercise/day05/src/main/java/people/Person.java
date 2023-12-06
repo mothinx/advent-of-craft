@@ -12,4 +12,8 @@ public record Person(String firstName, String lastName, List<Pet> pets) {
         pets.add(new Pet(petType, name, age));
         return this;
     }
+
+    public String fullName() {
+        return firstName + " " + lastName;
+    }
 }

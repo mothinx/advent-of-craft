@@ -60,7 +60,7 @@ class PopulationTests {
     }
 
     private static String formatPerson(Person person) {
-        return person.firstName() + " " + person.lastName() +
+        return person.fullName() +
                 formatOwningPets(person);
     }
 
