@@ -6,6 +6,7 @@ import ci.dependencies.Logger;
 import ci.dependencies.Project;
 
 public class Pipeline {
+    public static final String SUCCESS = "success";
     private final Config config;
     private final Emailer emailer;
     private final Logger log;
@@ -61,19 +62,15 @@ public class Pipeline {
     }
 
     private boolean runTests(Project project) {
-        boolean testsPassed;
-        if (project.hasTests()) {
-            if ("success".equals(project.runTests())) {
-                log.info("Tests passed");
-                testsPassed = true;
-            } else {
-                log.error("Tests failed");
-                testsPassed = false;
-            }
-        } else {
+        if (!project.hasTests()) {
             log.info("No tests");
-            testsPassed = true;
+            return true;
         }
-        return testsPassed;
+        if (!SUCCESS.equals(project.runTests())) {
+            log.error("Tests failed");
+            return false;
+        }
+        log.info("Tests passed");
+        return true;
     }
 }
