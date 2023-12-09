@@ -8,10 +8,10 @@ class PasswordValidator {
     }
 }
 
-public class PasswordValidatorTests {
+class PasswordValidatorTests {
 
     @Test
-    public void EmptyPasswordIsInvalid() {
+    void EmptyPasswordIsInvalid() {
         assertFalse(PasswordValidator.test(""));
     }
 }
