@@ -61,6 +61,16 @@ Here are the different challenges :
 - [Day 13: Find a way to eliminate the irrelevant, and amplify the essentials of those tests.](exercise/day13/docs/challenge.md)
 - [Day 14: Do not use exceptions anymore.](exercise/day14/docs/challenge.md)
 - [Day 15: Put a code under tests.](exercise/day15/docs/challenge.md)
+- [Day 16: Make this code immutable.](exercise/day16/docs/challenge.md)
+- [Day 17: Design one test that has the impact of thousands.](exercise/day17/docs/challenge.md)
+- [Day 18: Automatically detect Linguistic Anti-Patterns (LAP).](exercise/day18/docs/challenge.md)
+- [Day 19: Loosing up dead weight.](exercise/day19/docs/challenge.md)
+- [Day 20: No more exceptions in our domain.](exercise/day20/docs/challenge.md)
+- [Day 21: Refactor the tests and production code to Output-Based tests.](exercise/day21/docs/challenge.md)
+- [Day 22: Design a diamond program using T.D.D and Property-Based Testing.](exercise/day22/docs/challenge.md)
+- [Day 23: Refactor the code after putting it under test.](exercise/day23/docs/challenge.md)
+- [Day 24: Write the most complicated code you can.](exercise/day24/docs/challenge.md)
+- [Day 25: Share with the world what you have learned.](exercise/day25/docs/challenge.md)
 
 ### Solutions
 A solution proposal will be published here every day during the `Advent Of Craft` containing `the code` and a `step by step` guide.
@@ -79,7 +89,16 @@ A solution proposal will be published here every day during the `Advent Of Craft
 - [Day 12: Make your code open for extension.](solution/day12/docs/step-by-step.md)
 - [Day 13: Find a way to eliminate the irrelevant, and amplify the essentials of those tests.](solution/day13/docs/step-by-step.md)
 - [Day 14: Do not use exceptions anymore.](solution/day14/docs/step-by-step.md)
-
+- [Day 15: Put a code under tests.](solution/day15/docs/step-by-step.md)
+- [Day 16: Make this code immutable.](solution/day16/docs/step-by-step.md)
+- [Day 17: Design one test that has the impact of thousands.](solution/day17/docs/step-by-step.md)
+- [Day 18: Automatically detect Linguistic Anti-Patterns (LAP).](solution/day18/docs/step-by-step.md)
+- [Day 19: Loosing up dead weight.](solution/day19/docs/step-by-step.md)
+- [Day 20: No more exceptions in our domain.](solution/day20/docs/step-by-step.md)
+- [Day 21: Refactor the tests and production code to Output-Based tests.](solution/day21/docs/step-by-step.md)
+- [Day 22: Design a diamond program using T.D.D and Property-Based Testing.](solution/day22/docs/step-by-step.md)
+- [Day 23: Refactor the code after putting it under test.](solution/day23/docs/step-by-step.md)
+- [Day 24: Write the most complicated code you can.](solution/day24/docs/step-by-step.md)
  
 ## Contributors
 
