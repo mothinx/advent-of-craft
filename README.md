@@ -112,17 +112,17 @@ A solution proposal will be published here every day during the `Advent Of Craft
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/mothinx>
-            <img src=https://avatars.githubusercontent.com/u/9392139?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=mothinx/>
-            <br />
-            <sub style="font-size:14px"><b>mothinx</b></sub>
-        </a>
-    </td>
-    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/yanncourtel>
             <img src=https://avatars.githubusercontent.com/u/75068587?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Yann Courtel/>
             <br />
             <sub style="font-size:14px"><b>Yann Courtel</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/mothinx>
+            <img src=https://avatars.githubusercontent.com/u/9392139?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=mothinx/>
+            <br />
+            <sub style="font-size:14px"><b>mothinx</b></sub>
         </a>
     </td>
 </tr>
